@@ -1,0 +1,195 @@
+/* RESET E ESTILOS GLOBAIS */
+/* Remove estilos padrão do navegador para consistência */
+* {
+    margin: 0;          /* Remove margens padrão de todos elementos */
+    padding: 0;         /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Inclui padding e borda na largura/altura */
+    font-family: 'Arial', sans-serif; /* Define fonte padrão */
+}
+
+/* ESTILOS BASE DO CORPO */
+body {
+    padding-top: 50px; /* Altura aproximada do cabeçalho + margem */
+    line-height: 1.6;   /* Espaçamento entre linhas para melhor leitura */
+    color: #000000;        /* Cor padrão do texto (cinza escuro) */
+}
+
+/* EFEITO GLASSMORPHISM */
+body {
+    background-image: url(/imagem_de_fundo.png) ;
+    background-size: cover;     /* Cobrir toda a área */
+    background-attachment: fixed; /* Fundo fixo durante rolagem */
+    background-position: center; /* Centraliza a imagem */
+}
+
+
+/* ESTILOS DO CABEÇALHO */
+header {
+    background: #8fd1d76a; /* Cor de fundo (verde-azulado escuro) */
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+    transition: all 0.3s ease; /* Animação suave */
+    color: #46d8e9;     /* Cor do texto (azul claro) */
+    padding: 2rem;      /* Espaçamento interno */
+    width: 100%;        /* Ocupa 100% da largura */
+    z-index: 1000;      /* Garante que fique acima de outros elementos */
+}
+
+/* Efeito de transição suave ao navegar */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Efeito ao rolar a página */
+header.scrolled {
+    transform: translateY(-100%);
+    background: #70ddea5f; /* Branco semi-transparente */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav ul {
+    display: flex;      /* Disposição em linha (flexbox) */
+    list-style: none;   /* Remove marcadores de lista */
+    justify-content: center; /* Centraliza os itens */
+}
+
+nav ul li {
+    margin: 0 1rem;    /* Espaço horizontal entre itens */
+}
+
+nav ul li a {
+    color: #000000;        /* Cor do texto (branco) */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Transição suave para efeitos hover */
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+/* SEÇÕES PRINCIPAIS */
+section {
+    scroll-margin-top: 70px; /* Espaço para o cabeçalho fixo */
+    padding: 6rem 2rem 4rem; /* Padding superior maior */
+    padding: 4rem 2rem; /* Espaçamento interno generoso */
+    min-height: 100vh;  /* Altura mínima = tela inteira */
+    padding-top: 6rem;  /* Compensação para o cabeçalho fixo */
+}
+
+
+
+/* ESTILO DAS SEÇÕES */
+.home-section,
+.about-section,
+.projects-section,
+.contact-section {
+    background: #70ddea5f; /* Branco semi-transparente */
+    backdrop-filter: blur(10px);          /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px);  /* Compatibilidade com Safari */
+    border-radius: 15px;                  /* Bordas arredondadas */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+    margin: 20px;                         /* Margem externa */
+    padding: 2rem;                        /* Espaçamento interno */
+
+}
+
+/* ESTILOS DA SEÇÃO HOME */
+.home-section {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh; /* Altura total da viewport */
+    text-align: center; /* Centraliza o texto */
+}
+
+.home-content {
+    max-width: 800px; /* Largura máxima do conteúdo */
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens filhos */
+}
+
+.home-content img:hover {
+    transform: scale(1.05);
+}
+
+.home-content h1 {
+    font-style: italic;
+    font-family: 𝑺𝒆𝒓𝒊𝒇, 𝑩𝒐𝒍𝒅, 𝑰𝒕𝒂𝒍𝒊𝒄;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.home-content p {
+    font-family: Sᴍᴀʟʟ, Cᴀᴘs;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+    .home-image  img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Para foto redonda */
+    overflow:scroll;
+    border: 3px solid #46d9e998;
+}
+
+
+
+/* LAYOUT DE GRADE PARA PROJETOS */
+.projects-grid {
+    display: grid; /* Cria colunas responsivas (mínimo 300px) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;          /* Espaço entre itens */
+}
+
+/* CARDS DE PROJETOS */
+.project-card {
+    border: 1px solid #250808; /* Borda cinza clara */
+    padding: 1rem;          /* Espaçamento interno */
+    border-radius: 5px;     /* Cantos levemente arredondados */
+    background: #62a69f43;       /* Fundo branco */
+    transition: transform 0.3s; /* Animação suave ao passar mouse */
+}
+
+
+/* ESTILO DE BOTÕES */
+.btn {
+    display: inline-block;  /* Permite definir dimensões */
+    background: #5ed7d786;       /* Cor de fundo (cinza escuro) */
+    color: #ffffff86;            /* Cor do texto (branco) */
+    padding: 0.5rem 1rem;   /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px;    /* Bordas arredondadas */
+    margin-top: 1rem;      /* Margem superior */
+    transition: all 0.3s;  /* Transição suave para hover */
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;     /* Centraliza o conteúdo */
+    padding: 1rem;         /* Espaçamento interno */
+    background: #026468;      /* Cor de fundo (cinza escuro) */
+    color: #fff;           /* Cor do texto (branco) */
+    position: relative;    /* Posicionamento relativo */
+}
+
+/* EFEITOS HOVER (INTERATIVIDADE) */
+nav ul li a:hover {
+    background: rgba(70, 216, 233, 0.2);
+    color: #46d8e9;       /* Muda cor ao passar mouse */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Eleva o card levemente */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
+}
+
+.btn:hover {
+    background: #054247;  /* Muda para cor do cabeçalho */
+    transform: scale(1.05); /* Aumenta levemente */
+}
